@@ -3,5 +3,5 @@ services:
   - docker
 before_install:
   - docker build -t clean-version -f Dockerfile.dev .
-scripts:
+script:
   - docker run clean-version npm run test -- --coverage
